@@ -13,8 +13,7 @@
 		577030EA22405C8600F61B3D /* CapacitacaoIOS_CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 577030E822405C8600F61B3D /* CapacitacaoIOS_CoreData.xcdatamodeld */; };
 		577030EC22405C8700F61B3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577030EB22405C8700F61B3D /* Assets.xcassets */; };
 		577030EF22405C8700F61B3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577030ED22405C8700F61B3D /* LaunchScreen.storyboard */; };
-		577030FA22405C8700F61B3D /* CapacitacaoIOS_CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577030F922405C8700F61B3D /* CapacitacaoIOS_CoreDataTests.swift */; };
-		5770310522405C8700F61B3D /* CapacitacaoIOS_CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5770310422405C8700F61B3D /* CapacitacaoIOS_CoreDataUITests.swift */; };
+		577031182240677500F61B3D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577031172240677500F61B3D /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +43,8 @@
 		577030EE22405C8700F61B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		577030F022405C8700F61B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		577030F522405C8700F61B3D /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		577030F922405C8700F61B3D /* CapacitacaoIOS_CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapacitacaoIOS_CoreDataTests.swift; sourceTree = "<group>"; };
-		577030FB22405C8700F61B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5770310022405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5770310422405C8700F61B3D /* CapacitacaoIOS_CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapacitacaoIOS_CoreDataUITests.swift; sourceTree = "<group>"; };
-		5770310622405C8700F61B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		577031172240677500F61B3D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +76,11 @@
 			isa = PBXGroup;
 			children = (
 				577030E022405C8600F61B3D /* CapacitacaoIOS-CoreData */,
-				577030F822405C8700F61B3D /* CapacitacaoIOS-CoreDataTests */,
-				5770310322405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests */,
+				5770311522405E5200F61B3D /* Controller */,
+				5770311422405E4A00F61B3D /* Model */,
 				577030DF22405C8600F61B3D /* Products */,
+				5770311622405E6100F61B3D /* View */,
+				5770311322405E2F00F61B3D /* ViewModel */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,32 +98,43 @@
 			isa = PBXGroup;
 			children = (
 				577030E122405C8600F61B3D /* AppDelegate.swift */,
-				577030E322405C8600F61B3D /* ViewController.swift */,
-				577030E522405C8600F61B3D /* Main.storyboard */,
-				577030EB22405C8700F61B3D /* Assets.xcassets */,
-				577030ED22405C8700F61B3D /* LaunchScreen.storyboard */,
 				577030F022405C8700F61B3D /* Info.plist */,
-				577030E822405C8600F61B3D /* CapacitacaoIOS_CoreData.xcdatamodeld */,
+				577030EB22405C8700F61B3D /* Assets.xcassets */,
 			);
 			path = "CapacitacaoIOS-CoreData";
 			sourceTree = "<group>";
 		};
-		577030F822405C8700F61B3D /* CapacitacaoIOS-CoreDataTests */ = {
+		5770311322405E2F00F61B3D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				577030F922405C8700F61B3D /* CapacitacaoIOS_CoreDataTests.swift */,
-				577030FB22405C8700F61B3D /* Info.plist */,
 			);
-			path = "CapacitacaoIOS-CoreDataTests";
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		5770310322405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests */ = {
+		5770311422405E4A00F61B3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5770310422405C8700F61B3D /* CapacitacaoIOS_CoreDataUITests.swift */,
-				5770310622405C8700F61B3D /* Info.plist */,
+				577030E822405C8600F61B3D /* CapacitacaoIOS_CoreData.xcdatamodeld */,
 			);
-			path = "CapacitacaoIOS-CoreDataUITests";
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5770311522405E5200F61B3D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				577030E322405C8600F61B3D /* ViewController.swift */,
+				577031172240677500F61B3D /* TableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5770311622405E6100F61B3D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				577030ED22405C8700F61B3D /* LaunchScreen.storyboard */,
+				577030E522405C8600F61B3D /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +271,7 @@
 				577030E422405C8600F61B3D /* ViewController.swift in Sources */,
 				577030E222405C8600F61B3D /* AppDelegate.swift in Sources */,
 				577030EA22405C8600F61B3D /* CapacitacaoIOS_CoreData.xcdatamodeld in Sources */,
+				577031182240677500F61B3D /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +279,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577030FA22405C8700F61B3D /* CapacitacaoIOS_CoreDataTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +286,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5770310522405C8700F61B3D /* CapacitacaoIOS_CoreDataUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

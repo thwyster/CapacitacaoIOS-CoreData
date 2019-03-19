@@ -42,8 +42,8 @@
 		577030EB22405C8700F61B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577030EE22405C8700F61B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		577030F022405C8700F61B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		577030F522405C8700F61B3D /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5770310022405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		577030F522405C8700F61B3D /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataTests.xctest"; path = "/Users/aluno/Documents/GIT/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = "<absolute>"; };
+		5770310022405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataUITests.xctest"; path = "/Users/aluno/Documents/GIT/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = "<absolute>"; };
 		577031172240677500F61B3D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,30 +76,28 @@
 			isa = PBXGroup;
 			children = (
 				577030E022405C8600F61B3D /* CapacitacaoIOS-CoreData */,
-				5770311522405E5200F61B3D /* Controller */,
-				5770311422405E4A00F61B3D /* Model */,
-				577030DF22405C8600F61B3D /* Products */,
-				5770311622405E6100F61B3D /* View */,
-				5770311322405E2F00F61B3D /* ViewModel */,
 			);
 			sourceTree = "<group>";
 		};
 		577030DF22405C8600F61B3D /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				577030EB22405C8700F61B3D /* Assets.xcassets */,
 				577030DE22405C8600F61B3D /* CapacitacaoIOS-CoreData.app */,
-				577030F522405C8700F61B3D /* CapacitacaoIOS-CoreDataTests.xctest */,
-				5770310022405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		577030E022405C8600F61B3D /* CapacitacaoIOS-CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				577030E122405C8600F61B3D /* AppDelegate.swift */,
 				577030F022405C8700F61B3D /* Info.plist */,
-				577030EB22405C8700F61B3D /* Assets.xcassets */,
+				5770311522405E5200F61B3D /* Controller */,
+				5770311422405E4A00F61B3D /* Model */,
+				577030DF22405C8600F61B3D /* Products */,
+				5770311622405E6100F61B3D /* View */,
+				5770311322405E2F00F61B3D /* ViewModel */,
 			);
 			path = "CapacitacaoIOS-CoreData";
 			sourceTree = "<group>";
@@ -122,6 +120,7 @@
 		5770311522405E5200F61B3D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				577030E122405C8600F61B3D /* AppDelegate.swift */,
 				577030E322405C8600F61B3D /* ViewController.swift */,
 				577031172240677500F61B3D /* TableViewController.swift */,
 			);

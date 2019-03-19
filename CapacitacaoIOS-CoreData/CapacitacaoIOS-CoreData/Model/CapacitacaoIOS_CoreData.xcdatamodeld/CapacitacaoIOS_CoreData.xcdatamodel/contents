@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Endereco" representedClassName="Endereco" syncable="YES" codeGenerationType="class">
+    <entity name="Endereco" representedClassName=".Endereco" syncable="YES" codeGenerationType="class">
         <attribute name="idEndereco" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idPessoa" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="numero" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="rua" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fk_pessoa_endereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="fk_pessoa_endereco" inverseEntity="Pessoa" syncable="YES"/>
     </entity>
-    <entity name="Pessoa" representedClassName="Pessoa" syncable="YES" codeGenerationType="class">
+    <entity name="Pessoa" representedClassName=".Pessoa" syncable="YES" codeGenerationType="class">
         <attribute name="idPessoa" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="fk_pessoa_endereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Endereco" inverseName="fk_pessoa_endereco" inverseEntity="Endereco" syncable="YES"/>
         <relationship name="fk_pessoa_telefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Telefone" inverseName="fk_pessoa_telefone" inverseEntity="Telefone" syncable="YES"/>
     </entity>
-    <entity name="Telefone" representedClassName="Telefone" syncable="YES" codeGenerationType="class">
+    <entity name="Telefone" representedClassName=".Telefone" syncable="YES" codeGenerationType="class">
         <attribute name="idPessoa" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="idTelefone" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="fk_pessoa_telefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="fk_pessoa_telefone" inverseEntity="Pessoa" syncable="YES"/>

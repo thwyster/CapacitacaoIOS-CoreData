@@ -1,14 +1,10 @@
-//
-//  TableViewController.swift
-//  CapacitacaoIOS-CoreData
-//
-//  Created by ALUNO on 18/03/19.
-//  Copyright © 2019 ALUNO. All rights reserved.
-//
-
 import UIKit
 
 class TableViewController: UITableViewController {
+
+    let contexto = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext //Apagar somente para teste
+    
+    var pessoas:[Pessoa] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,18 +25,18 @@ class TableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return pessoas.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tbvContatos", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = pessoas[indexPath.row].nome
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

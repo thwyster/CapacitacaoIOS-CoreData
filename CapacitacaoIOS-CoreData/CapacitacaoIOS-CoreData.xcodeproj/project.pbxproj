@@ -34,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57279F7F2242FB5F006921F2 /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataTests.xctest"; path = "/Users/aluno/Documents/GIT/Ronny/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = "<absolute>"; };
+		57279F802242FB5F006921F2 /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataUITests.xctest"; path = "/Users/aluno/Documents/GIT/Ronny/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = "<absolute>"; };
 		577030DE22405C8600F61B3D /* CapacitacaoIOS-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CapacitacaoIOS-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577030E122405C8600F61B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577030E322405C8600F61B3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		577030EB22405C8700F61B3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577030EE22405C8700F61B3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		577030F022405C8700F61B3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		577030F522405C8700F61B3D /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataTests.xctest"; path = "/Users/aluno/Documents/GIT/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = "<absolute>"; };
-		5770310022405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataUITests.xctest"; path = "/Users/aluno/Documents/GIT/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = "<absolute>"; };
 		577031172240677500F61B3D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,7 +171,7 @@
 			);
 			name = "CapacitacaoIOS-CoreDataTests";
 			productName = "CapacitacaoIOS-CoreDataTests";
-			productReference = 577030F522405C8700F61B3D /* CapacitacaoIOS-CoreDataTests.xctest */;
+			productReference = 57279F7F2242FB5F006921F2 /* CapacitacaoIOS-CoreDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		577030FF22405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests */ = {
@@ -189,7 +189,7 @@
 			);
 			name = "CapacitacaoIOS-CoreDataUITests";
 			productName = "CapacitacaoIOS-CoreDataUITests";
-			productReference = 5770310022405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests.xctest */;
+			productReference = 57279F802242FB5F006921F2 /* CapacitacaoIOS-CoreDataUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

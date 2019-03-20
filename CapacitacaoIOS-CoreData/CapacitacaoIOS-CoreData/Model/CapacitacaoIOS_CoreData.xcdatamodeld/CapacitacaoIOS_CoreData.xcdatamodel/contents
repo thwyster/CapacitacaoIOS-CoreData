@@ -10,8 +10,8 @@
     <entity name="Pessoa" representedClassName=".Pessoa" syncable="YES" codeGenerationType="class">
         <attribute name="idPessoa" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="fk_pessoa_endereco" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Endereco" inverseName="fk_pessoa_endereco" inverseEntity="Endereco" syncable="YES"/>
-        <relationship name="fk_pessoa_telefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Telefone" inverseName="fk_pessoa_telefone" inverseEntity="Telefone" syncable="YES"/>
+        <relationship name="fk_pessoa_endereco" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Endereco" inverseName="fk_pessoa_endereco" inverseEntity="Endereco" syncable="YES"/>
+        <relationship name="fk_pessoa_telefone" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Telefone" inverseName="fk_pessoa_telefone" inverseEntity="Telefone" syncable="YES"/>
     </entity>
     <entity name="Telefone" representedClassName=".Telefone" syncable="YES" codeGenerationType="class">
         <attribute name="idPessoa" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -19,8 +19,8 @@
         <relationship name="fk_pessoa_telefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="fk_pessoa_telefone" inverseEntity="Pessoa" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Telefone" positionX="-293.03515625" positionY="155.06640625" width="128" height="88"/>
         <element name="Endereco" positionX="-55.03515625" positionY="-34.19921875" width="128" height="118"/>
-        <element name="Pessoa" positionX="-267.62890625" positionY="-6.6484375" width="107.71484375" height="103"/>
+        <element name="Pessoa" positionX="-271.80859375" positionY="-4.14453125" width="107.71484375" height="103"/>
+        <element name="Telefone" positionX="-519.9453125" positionY="10.9765625" width="128" height="88"/>
     </elements>
 </model>

@@ -41,11 +41,7 @@ class ViewController: UIViewController {
 //        pessoa3.idPessoa = 3
 //        pessoa3.nome = "Bruna Lisboa"
         
-        do {
-            try contexto.save()
-        } catch  {
-            print("Erro ao salvar contexto: \(error)")
-        }
+        CoreDataContextModel().save() //Salva o context
         
         //Ler Contatos
         let requisicao: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()

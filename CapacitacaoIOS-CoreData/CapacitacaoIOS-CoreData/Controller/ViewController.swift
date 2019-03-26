@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pessoas = PessoaViewModel().carregaContatos()
+        pessoas = PessoaModel().carregaContatos()
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

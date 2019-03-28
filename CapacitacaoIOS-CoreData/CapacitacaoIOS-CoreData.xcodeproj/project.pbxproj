@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5755A54322499DA200F3BCC5 /* NovoContatoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755A54222499DA200F3BCC5 /* NovoContatoController.swift */; };
+		5755A54322499DA200F3BCC5 /* ContatoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5755A54222499DA200F3BCC5 /* ContatoController.swift */; };
 		577030E222405C8600F61B3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577030E122405C8600F61B3D /* AppDelegate.swift */; };
 		577030E422405C8600F61B3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577030E322405C8600F61B3D /* ViewController.swift */; };
 		577030E722405C8600F61B3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 577030E522405C8600F61B3D /* Main.storyboard */; };
@@ -37,7 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5755A54222499DA200F3BCC5 /* NovoContatoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovoContatoController.swift; sourceTree = "<group>"; };
+		5744A1A8224C301B00AA9073 /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5744A1A9224C301B00AA9073 /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5755A54222499DA200F3BCC5 /* ContatoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoController.swift; sourceTree = "<group>"; };
 		577030DE22405C8600F61B3D /* CapacitacaoIOS-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CapacitacaoIOS-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577030E122405C8600F61B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577030E322405C8600F61B3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,8 +51,6 @@
 		577031172240677500F61B3D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		579CD87C2245B24000F8E56E /* PessoaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PessoaModel.swift; sourceTree = "<group>"; };
 		579CD87E2245B68A00F8E56E /* CoreDataContextModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataContextModel.swift; sourceTree = "<group>"; };
-		57A5D8B72249A9FA00BC339C /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataTests.xctest"; path = "/Users/aluno/Documents/GIT/Ronny/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = "<absolute>"; };
-		57A5D8B82249A9FA00BC339C /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataUITests.xctest"; path = "/Users/aluno/Documents/GIT/Ronny/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +90,8 @@
 			children = (
 				577030EB22405C8700F61B3D /* Assets.xcassets */,
 				577030DE22405C8600F61B3D /* CapacitacaoIOS-CoreData.app */,
+				5744A1A8224C301B00AA9073 /* CapacitacaoIOS-CoreDataTests.xctest */,
+				5744A1A9224C301B00AA9073 /* CapacitacaoIOS-CoreDataUITests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -124,7 +126,7 @@
 				577030E122405C8600F61B3D /* AppDelegate.swift */,
 				577030E322405C8600F61B3D /* ViewController.swift */,
 				577031172240677500F61B3D /* TableViewController.swift */,
-				5755A54222499DA200F3BCC5 /* NovoContatoController.swift */,
+				5755A54222499DA200F3BCC5 /* ContatoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,7 +182,7 @@
 			);
 			name = "CapacitacaoIOS-CoreDataTests";
 			productName = "CapacitacaoIOS-CoreDataTests";
-			productReference = 57A5D8B72249A9FA00BC339C /* CapacitacaoIOS-CoreDataTests.xctest */;
+			productReference = 5744A1A8224C301B00AA9073 /* CapacitacaoIOS-CoreDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		577030FF22405C8700F61B3D /* CapacitacaoIOS-CoreDataUITests */ = {
@@ -198,7 +200,7 @@
 			);
 			name = "CapacitacaoIOS-CoreDataUITests";
 			productName = "CapacitacaoIOS-CoreDataUITests";
-			productReference = 57A5D8B82249A9FA00BC339C /* CapacitacaoIOS-CoreDataUITests.xctest */;
+			productReference = 5744A1A9224C301B00AA9073 /* CapacitacaoIOS-CoreDataUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -276,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5755A54322499DA200F3BCC5 /* NovoContatoController.swift in Sources */,
+				5755A54322499DA200F3BCC5 /* ContatoController.swift in Sources */,
 				577030E422405C8600F61B3D /* ViewController.swift in Sources */,
 				577030E222405C8600F61B3D /* AppDelegate.swift in Sources */,
 				579CD87F2245B68A00F8E56E /* CoreDataContextModel.swift in Sources */,

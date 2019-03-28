@@ -35,29 +35,51 @@ class PessoaModel {
         return pessoas
     }
     
+    func deletarContato(_ idPessoa: String?) {
+        let requisicaoPessoa: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
+        requisicaoPessoa.predicate = NSPredicate(format: "idPessoa = %@", idPessoa!)
+        
+        let requisicaoEndereco: NSFetchRequest<Endereco> = Endereco.fetchRequest()
+        requisicaoEndereco.predicate = NSPredicate(format: "idPessoa = %@", idPessoa!)
+        
+        let requisicaoTelefone: NSFetchRequest<Telefone> = Telefone.fetchRequest()
+        requisicaoTelefone.predicate = NSPredicate(format: "idPessoa = %@", idPessoa!)
+        
+        let pessoaParaDeletar = try! CoreDataContextModel.contexto.fetch(requisicaoPessoa)
+        let enderecoParaDeletar = try! CoreDataContextModel.contexto.fetch(requisicaoEndereco)
+        let telefoneParaDeletar = try! CoreDataContextModel.contexto.fetch(requisicaoTelefone)
+        
+        for item in pessoaParaDeletar {
+            CoreDataContextModel.contexto.delete(item)
+        }
+        
+        for item in enderecoParaDeletar {
+            CoreDataContextModel.contexto.delete(item)
+        }
+        
+        for item in telefoneParaDeletar {
+            CoreDataContextModel.contexto.delete(item)
+        }
+    }
+    
     func salvarContato(_ txtNome: String,_ txtEndereco: String,_ txtNumero: Int16,_ txtTelefone: Int32) {
         let pessoa = Pessoa(context: CoreDataContextModel.contexto)
         let endereco = Endereco(context: CoreDataContextModel.contexto)
         let telefone = Telefone(context: CoreDataContextModel.contexto)
         
-        pessoa.idPessoa = 1
+        pessoa.idPessoa = UUID().uuidString
         pessoa.nome = txtNome
         
-        endereco.idEndereco = Int32(enderecos.count) + 1
-        endereco.idPessoa = Int32(pessoa.idPessoa)
+        endereco.idEndereco = UUID().uuidString
+        endereco.idPessoa = pessoa.idPessoa
         endereco.rua = txtEndereco
         endereco.numero = txtNumero
         
-        telefone.idTelefone = Int32(telefones.count) + 1
-        telefone.idPessoa = Int32(pessoa.idPessoa)
+        telefone.idTelefone = UUID().uuidString
+        telefone.idPessoa = pessoa.idPessoa
         telefone.numero = txtTelefone
         
-        do {
-            try CoreDataContextModel.contexto.save()
-            
-        } catch  {
-            print("Erro ao salvar contatos: \(error) ")
-        }
+        
     }
     
     func salvarContatoFake() {
@@ -66,16 +88,16 @@ class PessoaModel {
         let endereco = Endereco(context: CoreDataContextModel.contexto)
         let telefone = Telefone(context: CoreDataContextModel.contexto)
         
-        pessoa.idPessoa = 1
+        pessoa.idPessoa = UUID().uuidString
         pessoa.nome = "Ronny Czerkus"
         
-        endereco.idEndereco = 1
-        endereco.idPessoa = 1
+        endereco.idEndereco = UUID().uuidString
+        endereco.idPessoa = pessoa.idPessoa
         endereco.rua = "Av 7 de Setembro"
         endereco.numero = 1000
         
-        telefone.idTelefone = 1
-        telefone.idPessoa = 1
+        telefone.idTelefone = UUID().uuidString
+        telefone.idPessoa = pessoa.idPessoa
         telefone.numero = 999999999
         
         do {

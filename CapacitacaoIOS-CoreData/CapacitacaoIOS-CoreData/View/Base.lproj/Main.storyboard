@@ -74,7 +74,7 @@
         <!--Novo Contato-->
         <scene sceneID="Xva-vq-MG3">
             <objects>
-                <viewController id="PPn-UC-LNd" customClass="NovoContatoController" customModule="CapacitacaoIOS_CoreData" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PPn-UC-LNd" customClass="ContatoController" customModule="CapacitacaoIOS_CoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VtA-7B-QK0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

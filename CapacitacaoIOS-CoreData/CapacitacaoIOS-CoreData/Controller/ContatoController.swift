@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class NovoContatoController : UIViewController {
+class ContatoController : UIViewController {
     @IBOutlet weak var txtNome: UITextField!
     @IBOutlet weak var txtEndereco: UITextField!
     @IBOutlet weak var txtNumero: UITextField!

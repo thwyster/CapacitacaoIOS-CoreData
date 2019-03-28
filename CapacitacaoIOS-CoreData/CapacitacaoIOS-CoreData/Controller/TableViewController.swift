@@ -29,12 +29,25 @@ class TableViewController: UITableViewController {
         return cell
     }
     
+    //DELETAR
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             PessoaModel().deletarContato(pessoas[indexPath.row].idPessoa)
             pessoas.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             self.tableView.reloadData()
+        }
+    }
+    
+    //EDITAR
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("row: \(indexPath.row)")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editarContato" {
+            let contatos = segue.destination as! ContatoController
+            contatos.idPessoa = pessoas[(tableView.indexPathForSelectedRow?.row)!].idPessoa!
         }
     }
 }

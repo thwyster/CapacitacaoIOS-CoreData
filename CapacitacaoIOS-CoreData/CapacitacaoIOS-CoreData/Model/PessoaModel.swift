@@ -35,6 +35,34 @@ class PessoaModel {
         return pessoas
     }
     
+//    func carragaUmContato() -> Pessoa {
+//        var pessoa = Pessoa(context: CoreDataContextModel.contexto)
+//        var enderecoendereco = Endereco(context: CoreDataContextModel.contexto)
+//        var telefone = Telefone(context: CoreDataContextModel.contexto)
+//
+//        let requisicaoPessoa: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
+//        let requisicaoEndereco: NSFetchRequest<Endereco> = Endereco.fetchRequest()
+//        let requisicaoTelefone: NSFetchRequest<Telefone> = Telefone.fetchRequest()
+//        
+//        do {
+//            pessoas = try CoreDataContextModel.contexto.fetch(requisicaoPessoa)
+//            
+//            if pessoas.count < 1
+//            {
+//                self.salvarContatoFake()
+//                pessoas = try CoreDataContextModel.contexto.fetch(requisicaoPessoa)
+//            }
+//            
+//            enderecos = try CoreDataContextModel.contexto.fetch(requisicaoEndereco)
+//            telefones = try CoreDataContextModel.contexto.fetch(requisicaoTelefone)
+//            return pessoas
+//        } catch  {
+//            print("Erro ao carregar contatos: \(error) ")
+//        }
+//        
+//        return pessoas
+//    }
+    
     func deletarContato(_ idPessoa: String?) {
         let requisicaoPessoa: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
         requisicaoPessoa.predicate = NSPredicate(format: "idPessoa = %@", idPessoa!)

@@ -14,9 +14,17 @@ class ContatoController : UIViewController {
     @IBOutlet weak var txtEndereco: UITextField!
     @IBOutlet weak var txtNumero: UITextField!
     @IBOutlet weak var txtTelefone: UITextField!
+    var idPessoa: String = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("row: \(idPessoa)")
+    }
     
     @IBAction func btnSalvar(_ sender: Any) {
         PessoaModel().salvarContato(txtNome.text!, txtEndereco.text!, Int16(txtNumero.text!)!, Int32(txtTelefone.text!)!)
         navigationController?.popViewController(animated: true)
     }
+    
+    
 }

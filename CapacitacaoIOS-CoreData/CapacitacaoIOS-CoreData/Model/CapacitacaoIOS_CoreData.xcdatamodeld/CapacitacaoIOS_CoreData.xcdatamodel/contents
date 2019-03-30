@@ -16,7 +16,7 @@
     <entity name="Telefone" representedClassName=".Telefone" syncable="YES" codeGenerationType="class">
         <attribute name="idPessoa" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idTelefone" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="fk_pessoa_telefone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pessoa" inverseName="fk_pessoa_telefone" inverseEntity="Pessoa" syncable="YES"/>
     </entity>
     <elements>

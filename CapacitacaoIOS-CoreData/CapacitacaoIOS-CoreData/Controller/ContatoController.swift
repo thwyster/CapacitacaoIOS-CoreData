@@ -19,10 +19,19 @@ class ContatoController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("row: \(idPessoa)")
+        
+        if idPessoa != ""{
+            let contato: (Pessoa, Endereco, Telefone) = PessoaModel().carregaUmContato(idPessoa)
+            
+            txtNome.text = contato.0.nome
+            txtEndereco.text = contato.1.rua
+            txtNumero.text = String(contato.1.numero)
+            txtTelefone.text = String(contato.2.numero)
+        }
     }
     
     @IBAction func btnSalvar(_ sender: Any) {
-        PessoaModel().salvarContato(txtNome.text!, txtEndereco.text!, Int16(txtNumero.text!)!, Int32(txtTelefone.text!)!)
+        PessoaModel().salvarContato(txtNome.text!, txtEndereco.text!, Int16(txtNumero.text!)!, Int64(txtTelefone.text!)!)
         navigationController?.popViewController(animated: true)
     }
     

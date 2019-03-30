@@ -35,33 +35,33 @@ class PessoaModel {
         return pessoas
     }
     
-//    func carragaUmContato() -> Pessoa {
-//        var pessoa = Pessoa(context: CoreDataContextModel.contexto)
-//        var enderecoendereco = Endereco(context: CoreDataContextModel.contexto)
-//        var telefone = Telefone(context: CoreDataContextModel.contexto)
-//
-//        let requisicaoPessoa: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
-//        let requisicaoEndereco: NSFetchRequest<Endereco> = Endereco.fetchRequest()
-//        let requisicaoTelefone: NSFetchRequest<Telefone> = Telefone.fetchRequest()
-//        
-//        do {
-//            pessoas = try CoreDataContextModel.contexto.fetch(requisicaoPessoa)
-//            
-//            if pessoas.count < 1
-//            {
-//                self.salvarContatoFake()
-//                pessoas = try CoreDataContextModel.contexto.fetch(requisicaoPessoa)
-//            }
-//            
-//            enderecos = try CoreDataContextModel.contexto.fetch(requisicaoEndereco)
-//            telefones = try CoreDataContextModel.contexto.fetch(requisicaoTelefone)
-//            return pessoas
-//        } catch  {
-//            print("Erro ao carregar contatos: \(error) ")
-//        }
-//        
-//        return pessoas
-//    }
+    func carregaUmContato(_ idPessoa: String?) -> (Pessoa, Endereco, Telefone) {
+        var pessoa = Pessoa(context: CoreDataContextModel.contexto)
+        var endereco = Endereco(context: CoreDataContextModel.contexto)
+        var telefone = Telefone(context: CoreDataContextModel.contexto)
+
+        let requisicaoPessoa: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
+        requisicaoPessoa.predicate = NSPredicate(format: "idPessoa = %@", idPessoa!)
+        
+        let requisicaoEndereco: NSFetchRequest<Endereco> = Endereco.fetchRequest()
+        requisicaoEndereco.predicate = NSPredicate(format: "idPessoa = %@", idPessoa!)
+        
+        let requisicaoTelefone: NSFetchRequest<Telefone> = Telefone.fetchRequest()
+        requisicaoTelefone.predicate = NSPredicate(format: "idPessoa = %@", idPessoa!)
+        
+        do {
+            pessoa = try CoreDataContextModel.contexto.fetch(requisicaoPessoa).first!
+            
+            endereco = try CoreDataContextModel.contexto.fetch(requisicaoEndereco).first! //Sim isso esta errado pq deveria trazer todos os enderecos e telefones mas minha view nao esta preparada pra isso =/
+            telefone = try CoreDataContextModel.contexto.fetch(requisicaoTelefone).first!
+            return (pessoa, endereco, telefone)
+        
+        } catch  {
+            print("Erro ao carregar contatos: \(error) ")
+        }
+        
+        return (pessoa, endereco, telefone)
+    }
     
     func deletarContato(_ idPessoa: String?) {
         let requisicaoPessoa: NSFetchRequest<Pessoa> = Pessoa.fetchRequest()
@@ -90,7 +90,7 @@ class PessoaModel {
         }
     }
     
-    func salvarContato(_ txtNome: String,_ txtEndereco: String,_ txtNumero: Int16,_ txtTelefone: Int32) {
+    func salvarContato(_ txtNome: String,_ txtEndereco: String,_ txtNumero: Int16,_ txtTelefone: Int64) {
         let pessoa = Pessoa(context: CoreDataContextModel.contexto)
         let endereco = Endereco(context: CoreDataContextModel.contexto)
         let telefone = Telefone(context: CoreDataContextModel.contexto)

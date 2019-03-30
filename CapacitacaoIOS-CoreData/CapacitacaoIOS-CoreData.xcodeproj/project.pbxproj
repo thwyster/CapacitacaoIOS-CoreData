@@ -37,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5744A1A8224C301B00AA9073 /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5744A1A9224C301B00AA9073 /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5744A1A8224C301B00AA9073 /* CapacitacaoIOS-CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataTests.xctest"; path = "/Users/pucpr/Documents/GIT/Ronny/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataTests.xctest"; sourceTree = "<absolute>"; };
+		5744A1A9224C301B00AA9073 /* CapacitacaoIOS-CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "CapacitacaoIOS-CoreDataUITests.xctest"; path = "/Users/pucpr/Documents/GIT/Ronny/CapacitacaoIOS-CoreData/CapacitacaoIOS-CoreData/build/Debug-iphoneos/CapacitacaoIOS-CoreDataUITests.xctest"; sourceTree = "<absolute>"; };
 		5755A54222499DA200F3BCC5 /* ContatoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoController.swift; sourceTree = "<group>"; };
 		577030DE22405C8600F61B3D /* CapacitacaoIOS-CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CapacitacaoIOS-CoreData.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		577030E122405C8600F61B3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,8 +90,6 @@
 			children = (
 				577030EB22405C8700F61B3D /* Assets.xcassets */,
 				577030DE22405C8600F61B3D /* CapacitacaoIOS-CoreData.app */,
-				5744A1A8224C301B00AA9073 /* CapacitacaoIOS-CoreDataTests.xctest */,
-				5744A1A9224C301B00AA9073 /* CapacitacaoIOS-CoreDataUITests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -105,7 +103,6 @@
 				5770311422405E4A00F61B3D /* Model */,
 				577030DF22405C8600F61B3D /* Products */,
 				5770311622405E6100F61B3D /* View */,
-				579CD87B2245B22E00F8E56E /* ViewModel */,
 			);
 			path = "CapacitacaoIOS-CoreData";
 			sourceTree = "<group>";
@@ -138,13 +135,6 @@
 				577030E522405C8600F61B3D /* Main.storyboard */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		579CD87B2245B22E00F8E56E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

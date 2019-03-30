@@ -32,10 +32,14 @@ class TableViewController: UITableViewController {
     //DELETAR
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete {
-            PessoaModel().deletarContato(pessoas[indexPath.row].idPessoa)
+            if pessoas[indexPath.row].idPessoa != nil{
+                PessoaModel().deletarContato(pessoas[indexPath.row].idPessoa)
+            }
+            
             pessoas.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             self.tableView.reloadData()
+            
         }
     }
     
